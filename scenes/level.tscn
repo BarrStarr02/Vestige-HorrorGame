@@ -1,4 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://pc6hys565kc1"]
+[gd_scene load_steps=6 format=3 uid="uid://pc6hys565kc1"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_cagpl"]
+sky_top_color = Color(0.062746, 0.144392, 0.348126, 1)
+sky_horizon_color = Color(0.552487, 0.571478, 0.614798, 1)
+sky_energy_multiplier = 0.7
+ground_bottom_color = Color(0.147203, 0.141521, 0.111066, 1)
+ground_horizon_color = Color(0.552487, 0.571478, 0.614798, 1)
+
+[sub_resource type="Sky" id="Sky_ga8rd"]
+sky_material = SubResource("ProceduralSkyMaterial_cagpl")
+
+[sub_resource type="Environment" id="Environment_0h4kb"]
+background_mode = 2
+sky = SubResource("Sky_ga8rd")
+tonemap_mode = 2
+glow_enabled = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gu03g"]
 
@@ -6,8 +22,16 @@
 
 [node name="level" type="Node3D"]
 
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_0h4kb")
+
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.572604, 0.819832, 0, -0.819832, 0.572604, 0, 9.14193, 8.04735)
+transform = Transform3D(1, 0, 0, 0, -0.9881, 0.153814, 0, -0.153814, -0.9881, 0, 15.6046, -18.1552)
+light_color = Color(0.801798, 0.833862, 0.960307, 1)
+light_indirect_energy = 4.232
+light_volumetric_fog_energy = 4.647
+shadow_enabled = true
+shadow_blur = 4.716
 
 [node name="floor" type="StaticBody3D" parent="."]
 transform = Transform3D(30, 0, 0, 0, 0.145, 0, 0, 0, 30, 0, 0, 0)
