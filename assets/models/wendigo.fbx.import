@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bw2tgyyaw1eqi"
-path="res://.godot/imported/wendigo.fbx-477efddb2c811813cdd887e0fe8ee8e6.scn"
+path="res://.godot/imported/wendigo.fbx-ab3742ddc748b3393b74929f77c12879.scn"
 
 [deps]
 
-source_file="res://assets/modles/wendigo.fbx"
-dest_files=["res://.godot/imported/wendigo.fbx-477efddb2c811813cdd887e0fe8ee8e6.scn"]
+source_file="res://assets/models/wendigo.fbx"
+dest_files=["res://.godot/imported/wendigo.fbx-ab3742ddc748b3393b74929f77c12879.scn"]
 
 [params]
 
