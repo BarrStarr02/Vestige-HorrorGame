@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://pc6hys565kc1"]
+[gd_scene load_steps=8 format=3 uid="uid://pc6hys565kc1"]
 
 [ext_resource type="PackedScene" uid="uid://btg3v3qoxe5wt" path="res://scenes/player.tscn" id="1_j7cys"]
+[ext_resource type="PackedScene" uid="uid://bft8n8va5nnov" path="res://scenes/wendigo.tscn" id="2_clumq"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_cagpl"]
 sky_top_color = Color(0.062746, 0.144392, 0.348126, 1)
@@ -44,45 +45,48 @@ shape = SubResource("BoxShape3D_gu03g")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="floor"]
 mesh = SubResource("BoxMesh_l1op5")
 
-[node name="wall" type="StaticBody3D" parent="."]
+[node name="placeholder tree" type="StaticBody3D" parent="."]
 transform = Transform3D(1.49, 0, 0, 0, 9.74, 0, 0, 0, 2.36, 10.8813, 2.37756, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="wall"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="placeholder tree"]
 shape = SubResource("BoxShape3D_gu03g")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="wall"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="placeholder tree"]
 mesh = SubResource("BoxMesh_l1op5")
 
-[node name="wall2" type="StaticBody3D" parent="."]
+[node name="placeholder tree2" type="StaticBody3D" parent="."]
 transform = Transform3D(10, 0, 0, 0, 5, 0, 0, 0, 10, -9.91848, 2.37756, 1.48873)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="wall2"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="placeholder tree2"]
 transform = Transform3D(0.255, 0, 0, 0, 3.58, 0, 0, 0, 0.315, 0, 0, -0.959923)
 shape = SubResource("BoxShape3D_gu03g")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="wall2"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="placeholder tree2"]
 transform = Transform3D(0.24, 0, 0, 0, 3.235, 0, 0, 0, 0.245, 0, 0.199876, -0.974785)
 mesh = SubResource("BoxMesh_l1op5")
 
-[node name="wall3" type="StaticBody3D" parent="."]
+[node name="placeholder tree3" type="StaticBody3D" parent="."]
 transform = Transform3D(10, 0, 0, 0, 5, 0, 0, 0, 10, 1.43065, 2.37756, 16.1413)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="wall3"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="placeholder tree3"]
 transform = Transform3D(0.3, 0, 0, 0, 2.525, 0, 0, 0, 0.3, 0, 0, -2.95604)
 shape = SubResource("BoxShape3D_gu03g")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="wall3"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="placeholder tree3"]
 transform = Transform3D(0.315, 0, 0, 0, 2.745, 0, 0, 0, 0.255, 0, 0, -2.95497)
 mesh = SubResource("BoxMesh_l1op5")
 
-[node name="wall4" type="StaticBody3D" parent="."]
+[node name="placeholder tree4" type="StaticBody3D" parent="."]
 transform = Transform3D(1.49, 0, 0, 0, 9.74, 0, 0, 0, 2.36, -4.1981, 4.35362, 7.93604)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="wall4"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="placeholder tree4"]
 shape = SubResource("BoxShape3D_gu03g")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="wall4"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="placeholder tree4"]
 mesh = SubResource("BoxMesh_l1op5")
 
 [node name="Player" parent="." instance=ExtResource("1_j7cys")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0593, 0)
+
+[node name="wendigo" parent="." instance=ExtResource("2_clumq")]
+transform = Transform3D(0.35, 0, 0, 0, 0.35, 0, 0, 0, 0.35, -7.87235, 0.836959, 0)

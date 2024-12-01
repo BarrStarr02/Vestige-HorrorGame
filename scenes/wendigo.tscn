@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bft8n8va5nnov"]
+
+[ext_resource type="PackedScene" uid="uid://bw2tgyyaw1eqi" path="res://assets/modles/wendigo.fbx" id="1_1dyrr"]
+[ext_resource type="Texture2D" uid="uid://djng7ixw83ooi" path="res://assets/textures/W3.png" id="2_ifb2m"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8q828"]
+albedo_texture = ExtResource("2_ifb2m")
+
+[node name="wendigo" instance=ExtResource("1_1dyrr")]
+transform = Transform3D(0.35, 0, 0, 0, 0.35, 0, 0, 0, 0.35, 0, 0, 0)
+
+[node name="Camera" parent="." index="0"]
+transform = Transform3D(68.5921, -32.4013, 65.1558, 8.9407e-06, 89.5396, 44.5271, -72.7676, -30.5421, 61.417, 14.8112, 10.4287, 10.8403)
+visible = false
+
+[node name="W3_001" parent="." index="1"]
+transform = Transform3D(100, 0, 0, 0, -4.37114e-06, 100, 0, -100, -4.37114e-06, -2.75081, 2.27651, -0.936942)
+
+[node name="W3" parent="." index="2"]
+transform = Transform3D(6.54589e-06, -7.43163e-06, 54.9109, -54.9109, -1.9939e-06, 6.54589e-06, 2.40023e-06, -45.615, -8.94613e-06, 4.2091, 3.75454, -0.938684)
+surface_material_override/0 = SubResource("StandardMaterial3D_8q828")
