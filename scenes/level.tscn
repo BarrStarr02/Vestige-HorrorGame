@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=3 uid="uid://pc6hys565kc1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gu03g"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_l1op5"]
+
+[node name="level" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.572604, 0.819832, 0, -0.819832, 0.572604, 0, 9.14193, 8.04735)
+
+[node name="floor" type="StaticBody3D" parent="."]
+transform = Transform3D(30, 0, 0, 0, 0.145, 0, 0, 0, 30, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor"]
+shape = SubResource("BoxShape3D_gu03g")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="floor"]
+mesh = SubResource("BoxMesh_l1op5")
+
+[node name="wall" type="StaticBody3D" parent="."]
+transform = Transform3D(10, 0, 0, 0, 5, 0, 0, 0, 10, 14.3925, 2.37756, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wall"]
+shape = SubResource("BoxShape3D_gu03g")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="wall"]
+mesh = SubResource("BoxMesh_l1op5")
+
+[node name="wall2" type="StaticBody3D" parent="."]
+transform = Transform3D(10, 0, 0, 0, 5, 0, 0, 0, 10, -9.91848, 2.37756, 1.48873)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wall2"]
+shape = SubResource("BoxShape3D_gu03g")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="wall2"]
+mesh = SubResource("BoxMesh_l1op5")
+
+[node name="wall3" type="StaticBody3D" parent="."]
+transform = Transform3D(10, 0, 0, 0, 5, 0, 0, 0, 10, 1.43065, 2.37756, 16.1413)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wall3"]
+shape = SubResource("BoxShape3D_gu03g")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="wall3"]
+mesh = SubResource("BoxMesh_l1op5")
