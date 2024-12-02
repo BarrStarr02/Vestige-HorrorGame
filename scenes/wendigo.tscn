@@ -7,7 +7,7 @@
 albedo_texture = ExtResource("2_ifb2m")
 
 [node name="wendigo" instance=ExtResource("1_1dyrr")]
-transform = Transform3D(0.35, 0, 0, 0, 0.35, 0, 0, 0, 0.35, 0, 0, 0)
+transform = Transform3D(-1.5299e-08, 0, 0.35, 0, 0.35, 0, -0.35, 0, -1.5299e-08, 0.26, 0.02, 0)
 
 [node name="Camera" parent="." index="0"]
 transform = Transform3D(68.5921, -32.4013, 65.1558, 8.9407e-06, 89.5396, 44.5271, -72.7676, -30.5421, 61.417, 14.8112, 10.4287, 10.8403)
