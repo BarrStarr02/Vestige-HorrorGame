@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://pc6hys565kc1"]
+[gd_scene load_steps=9 format=3 uid="uid://pc6hys565kc1"]
 
 [ext_resource type="PackedScene" uid="uid://btg3v3qoxe5wt" path="res://scenes/player.tscn" id="1_j7cys"]
 [ext_resource type="PackedScene" uid="uid://bft8n8va5nnov" path="res://scenes/wendigo.tscn" id="2_clumq"]
+[ext_resource type="PackedScene" uid="uid://bgry8luy0n55i" path="res://scenes/trees.tscn" id="3_mgcvm"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_cagpl"]
 sky_top_color = Color(0.062746, 0.144392, 0.348126, 1)
@@ -89,4 +90,7 @@ mesh = SubResource("BoxMesh_l1op5")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0593, 0)
 
 [node name="wendigo" parent="." instance=ExtResource("2_clumq")]
-transform = Transform3D(0.35, 0, 0, 0, 0.35, 0, 0, 0, 0.35, -7.87235, 0.836959, 0)
+transform = Transform3D(0.349789, 0, -0.0121477, 0, 0.35, 0, 0.0121477, 0, 0.349789, -9.05079, 0.825384, 0)
+
+[node name="trees" parent="." instance=ExtResource("3_mgcvm")]
+transform = Transform3D(0.55, 0, 0, 0, 0.55, 0, 0, 0, 0.55, 15, 0, 0)

@@ -1,0 +1,45 @@
+[gd_scene load_steps=12 format=3 uid="uid://bgry8luy0n55i"]
+
+[ext_resource type="PackedScene" uid="uid://cxn0agnyhirii" path="res://assets/models/trees.blend" id="1_vb4e1"]
+[ext_resource type="Texture2D" uid="uid://c6ex15ej18tsr" path="res://assets/textures/C.jpg" id="2_xwbm5"]
+[ext_resource type="Texture2D" uid="uid://c7ahmc1dxgvdu" path="res://assets/textures/R.png" id="3_wpijt"]
+[ext_resource type="Texture2D" uid="uid://bccxvgjwnnf0q" path="res://assets/textures/R2.png" id="4_ehov4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xg2cs"]
+albedo_texture = ExtResource("2_xwbm5")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j6qdk"]
+albedo_texture = ExtResource("3_wpijt")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_80v82"]
+albedo_texture = ExtResource("2_xwbm5")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_33mf3"]
+albedo_texture = ExtResource("4_ehov4")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a0rm3"]
+albedo_texture = ExtResource("2_xwbm5")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s0ik2"]
+albedo_texture = ExtResource("3_wpijt")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5srk6"]
+albedo_texture = ExtResource("2_xwbm5")
+
+[node name="trees" instance=ExtResource("1_vb4e1")]
+transform = Transform3D(0.55, 0, 0, 0, 0.55, 0, 0, 0, 0.55, 0, 0, 0)
+
+[node name="Arbol4" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_xg2cs")
+surface_material_override/1 = SubResource("StandardMaterial3D_j6qdk")
+
+[node name="Arbol3" parent="." index="1"]
+surface_material_override/0 = SubResource("StandardMaterial3D_80v82")
+surface_material_override/1 = SubResource("StandardMaterial3D_33mf3")
+
+[node name="Arbol" parent="." index="2"]
+surface_material_override/0 = SubResource("StandardMaterial3D_a0rm3")
+surface_material_override/1 = SubResource("StandardMaterial3D_s0ik2")
+
+[node name="Arbol1" parent="." index="3"]
+material_override = SubResource("StandardMaterial3D_5srk6")
