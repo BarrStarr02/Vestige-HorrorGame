@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=12 format=3 uid="uid://bgry8luy0n55i"]
+=======
+[gd_scene load_steps=6 format=3 uid="uid://bgry8luy0n55i"]
+>>>>>>> Stashed changes
 
 [ext_resource type="PackedScene" uid="uid://cxn0agnyhirii" path="res://assets/models/trees.blend" id="1_vb4e1"]
 [ext_resource type="Texture2D" uid="uid://c6ex15ej18tsr" path="res://assets/textures/C.jpg" id="2_xwbm5"]
