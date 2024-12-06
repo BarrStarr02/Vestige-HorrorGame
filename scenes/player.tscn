@@ -15,6 +15,7 @@ script = ExtResource("1_gkobr")
 shape = SubResource("CapsuleShape3D_xnkbj")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+visible = false
 mesh = SubResource("CapsuleMesh_rcn85")
 
 [node name="head" type="Node3D" parent="."]
@@ -22,3 +23,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.647245, 0)
 script = ExtResource("2_b53gi")
 
 [node name="Camera3D" type="Camera3D" parent="head"]
+
+[node name="Node3D" type="Node3D" parent="head/Camera3D"]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="head/Camera3D/Node3D"]
+light_color = Color(0.981268, 0.95034, 0.873595, 1)
+light_energy = 7.071
+light_volumetric_fog_energy = 0.0
+spot_range = 132.44
+spot_attenuation = 1.81
+spot_angle_attenuation = 2.54912

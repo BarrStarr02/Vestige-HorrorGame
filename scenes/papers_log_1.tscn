@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3 uid="uid://biut1aohvwj3d"]
+
+[ext_resource type="PackedScene" uid="uid://dhs3ief0q1ji7" path="res://assets/models/papers_log_1.glb" id="1_vt8ui"]
+[ext_resource type="Texture2D" uid="uid://d3inrej3rrj3g" path="res://assets/textures/paper_log_1.png" id="2_pi7sg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6frn5"]
+albedo_texture = ExtResource("2_pi7sg")
+
+[node name="papers_log_1" instance=ExtResource("1_vt8ui")]
+
+[node name="Paper_Log1" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_6frn5")
