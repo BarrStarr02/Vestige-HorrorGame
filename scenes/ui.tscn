@@ -1,0 +1,56 @@
+[gd_scene load_steps=3 format=3 uid="uid://byaq5c2yq2iv"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_dqb78"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_acvb5"]
+
+[node name="UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="sprint_slider" type="VSlider" parent="."]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 446.0
+offset_right = 57.0
+offset_bottom = 672.0
+theme_override_icons/grabber = SubResource("ImageTexture_dqb78")
+max_value = 1.0
+step = 0.0
+value = 1.0
+
+[node name="interact text" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 507.0
+offset_top = 465.0
+offset_right = 845.0
+offset_bottom = 538.0
+theme_override_font_sizes/normal_font_size = 39
+text = "[F] Interact"
+
+[node name="fire_stuff" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="fire_slider" type="HSlider" parent="fire_stuff"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 19.0
+offset_right = 406.0
+offset_bottom = 35.0
+theme_override_icons/grabber = SubResource("ImageTexture_acvb5")
+step = 0.0
+
+[node name="interact text2" type="RichTextLabel" parent="fire_stuff/fire_slider"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 10.0
+offset_right = 341.0
+offset_bottom = 83.0
+theme_override_font_sizes/normal_font_size = 26
+text = "FIRE HEALTH"
