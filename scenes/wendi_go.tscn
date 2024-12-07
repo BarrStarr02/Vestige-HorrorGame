@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=4 uid="uid://7emewjub2wws"]
 
-[ext_resource type="Texture2D" uid="uid://ch1rln2fo436b" path="res://assets/textures/W2.png" id="1_g3aa2"]
+[ext_resource type="Texture2D" uid="uid://d1f14nnlfh3nr" path="res://assets/textures/W2.png" id="1_g3aa2"]
 [ext_resource type="Animation" uid="uid://cpgxxeg5oh3do" path="res://assets/animations/imports/IdleImport.res" id="2_ogieu"]
 [ext_resource type="AnimationLibrary" uid="uid://ceg05xtxp81fg" path="res://assets/animations/imports/Imported.res" id="3_eae5r"]
 

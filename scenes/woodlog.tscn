@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://covr6e4o6hdcl"]
+
+[ext_resource type="Script" path="res://Scripts/pickup_woodlog.gd" id="1_roy37"]
+[ext_resource type="Texture2D" uid="uid://dgnt38s11q3f1" path="res://assets/textures/C.jpg" id="1_u0rug"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_lnqlw"]
+radial_segments = 8
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_acdrk"]
+albedo_texture = ExtResource("1_u0rug")
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_llkfo"]
+height = 1.24863
+radius = 0.225715
+
+[node name="woodlog" type="StaticBody3D"]
+script = ExtResource("1_roy37")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.0028274, -0.534987, 0, 0.40499, -0.00373496, 0, 0, 0, 0.41, 0, 0.205828, 0)
+mesh = SubResource("CylinderMesh_lnqlw")
+surface_material_override/0 = SubResource("StandardMaterial3D_acdrk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.000192002, -1, 0, 1, 0.000192002, 0, 0, 0, 1, 0, 0.207086, 0)
+shape = SubResource("CylinderShape3D_llkfo")
