@@ -15,7 +15,7 @@ script = ExtResource("1_gkobr")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_xnkbj")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." groups=["player"]]
 visible = false
 mesh = SubResource("CapsuleMesh_rcn85")
 
