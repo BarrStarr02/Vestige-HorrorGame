@@ -1,8 +1,7 @@
-[gd_scene load_steps=87 format=4 uid="uid://pc6hys565kc1"]
+[gd_scene load_steps=89 format=4 uid="uid://pc6hys565kc1"]
 
 [ext_resource type="PackedScene" uid="uid://btg3v3qoxe5wt" path="res://scenes/player.tscn" id="1_j7cys"]
 [ext_resource type="Script" path="res://scenes/level.gd" id="1_o6ib5"]
-[ext_resource type="PackedScene" uid="uid://byaq5c2yq2iv" path="res://scenes/ui.tscn" id="1_v5h7k"]
 [ext_resource type="PackedScene" uid="uid://bft8n8va5nnov" path="res://scenes/wendigo.tscn" id="2_clumq"]
 [ext_resource type="Texture2D" uid="uid://dgnt38s11q3f1" path="res://assets/textures/C.jpg" id="3_qid6m"]
 [ext_resource type="Texture2D" uid="uid://1a7utvy8n6ff" path="res://assets/textures/PSX_Seamless_ForestWildGround_128px.png" id="4_3paik"]
@@ -20,7 +19,11 @@
 [ext_resource type="Script" path="res://Scripts/campfire.gd" id="17_hk5ve"]
 [ext_resource type="Texture2D" uid="uid://q3n32t2xs3m0" path="res://assets/textures/grass_patch_summer.png" id="17_v4e10"]
 [ext_resource type="PackedScene" uid="uid://covr6e4o6hdcl" path="res://scenes/woodlog.tscn" id="19_vx5rd"]
-[ext_resource type="Script" path="res://Scripts/deposit_area.gd" id="21_es4bx"]
+[ext_resource type="Script" path="res://Scripts/static_body_3d.gd" id="20_ch0gl"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_dqb78"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_acvb5"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_gec67"]
 
@@ -761,12 +764,64 @@ particles_anim_loop = false
 material = SubResource("StandardMaterial3D_01oen")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_da2gw"]
-size = Vector3(2.15375, 1.68604, 2.10162)
+size = Vector3(2.15375, 2.31128, 2.10162)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_cfalv"]
+radius = 0.602723
 
 [node name="level" type="Node3D"]
 script = ExtResource("1_o6ib5")
 
-[node name="UI" parent="." instance=ExtResource("1_v5h7k")]
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="sprint_slider" type="VSlider" parent="UI"]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 446.0
+offset_right = 57.0
+offset_bottom = 672.0
+theme_override_icons/grabber = SubResource("ImageTexture_dqb78")
+max_value = 1.0
+step = 0.0
+value = 1.0
+
+[node name="interact text" type="RichTextLabel" parent="UI"]
+layout_mode = 0
+offset_left = 507.0
+offset_top = 465.0
+offset_right = 845.0
+offset_bottom = 538.0
+theme_override_font_sizes/normal_font_size = 39
+text = "[F] Interact"
+
+[node name="fire_stuff" type="Control" parent="UI"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="fire_slider" type="HSlider" parent="UI/fire_stuff"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 19.0
+offset_right = 406.0
+offset_bottom = 35.0
+theme_override_icons/grabber = SubResource("ImageTexture_acvb5")
+step = 0.0
+
+[node name="interact text2" type="RichTextLabel" parent="UI/fire_stuff/fire_slider"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 16.0
+offset_right = 343.0
+offset_bottom = 89.0
+theme_override_font_sizes/normal_font_size = 25
+text = "FIRE HEALTH"
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_0h4kb")
@@ -13678,13 +13733,6 @@ light_energy = 1.97
 light_volumetric_fog_energy = 3.844
 omni_range = 15.0
 
-[node name="DepositArea" type="Area3D" parent="campfire"]
-script = ExtResource("21_es4bx")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="campfire/DepositArea"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.103668, 0.936702, -0.0409851)
-shape = SubResource("BoxShape3D_da2gw")
-
 [node name="campfire2" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.80165, 0.0186188, -2.62325)
 
@@ -13728,3 +13776,23 @@ visible = false
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.103668, 0.936702, -0.0409851)
 visible = false
 shape = SubResource("BoxShape3D_da2gw")
+
+[node name="button" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.71786, 0, -2.54678)
+
+[node name="Area3D" type="Area3D" parent="button"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.623416, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="button/Area3D"]
+script = ExtResource("20_ch0gl")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="button/Area3D/StaticBody3D"]
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="button/Area3D/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.458386, 0)
+shape = SubResource("SphereShape3D_cfalv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="button/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.138193, -0.305924, -0.0394726)
+shape = SubResource("SphereShape3D_cfalv")

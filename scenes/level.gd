@@ -1,7 +1,7 @@
 extends Node3D
 
 @export var log_scene = preload("res://scenes/woodlog.tscn")
-@export var log_count = 30
+@export var log_count = 50
 @export var spawn_area = Vector3(200, 0, 200)
 
 func _ready():

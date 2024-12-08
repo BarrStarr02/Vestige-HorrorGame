@@ -8,53 +8,29 @@ var sprint_slider
 var sprint_drain_amount = 0.3
 var sprint_refresh_amount = 0.2
 var has_log = false
-var interactable : Node = null
+var interactable : Node = null  # Reference to the interactable object (log or campfire)
+var fire_slider : Slider  # Reference to the fire slider
+var in_deposit_area = false  # Track if the player is in the deposit area
+var deposit_area : Area3D
+var collected_logs = 0
 
-# Variables to track if the player is in the deposit area
-var in_deposit_area = false
+# Called when the player enters the deposit area
 
-# Reference to the interact text UI
-var int_text : Control  # Make sure this is properly referenced in _ready()
 
-func pick_up_log():
-	has_log = true
-
-# Modify interact_with_fire to work when in the deposit area
-func interact_with_fire(campfire: Node):
-	if has_log and in_deposit_area:
-		campfire.add_fuel()  # Add fuel to the fire
-		has_log = false  # Log is consumed
-		print("Log added to the fire!")  # Debug message
-
-# Detecting when the player enters or exits the deposit area
-func _on_body_entered(body: Node3D):
-	if body.is_in_group("pickup_log"):
-		interactable = body  # Detect log to pick up
-	elif body.is_in_group("deposit_area"):  # Check if the player enters the deposit area
-		in_deposit_area = true
-		print("Player entered deposit area.")  # Debug message
-
-func _on_body_exited(body: Node3D):
-	if body.is_in_group("deposit_area"):  # Check if the player leaves the deposit area
-		in_deposit_area = false
-		print("Player exited deposit area.")  # Debug message
+# Called when the player leaves the deposit ar
 
 # _ready to initialize components like sprint slider, etc.
 func _ready():
 	add_to_group("player")
 	ORIGINAL_SPEED = SPEED
 	sprint_slider = get_node("/root/" + get_tree().current_scene.name + "/UI/sprint_slider")
-	int_text = get_node("/root/" + get_tree().current_scene.name + "/UI/interact_text")  # Reference to interact text
+	fire_slider = get_node("/root/" + get_tree().current_scene.name + "/UI/fire_stuff/fire_slider")  # Reference to the fire slider
 	pass
 
 # Handle input, movement, sprinting, and interactions
 func _process(delta):
-	if interactable and interactable.is_in_group("pickup_log"):
-		if Input.is_action_just_pressed("interact"):
-			interactable.interact_with_log()  # Call the log's interact method
-			print("Player interacted with log.")  # Debug message
-			interactable = null  # Clear interactable after interacting
 
+		
 	# Handle sprint logic
 	if SPEED == SPRINT_SPEED:
 		sprint_slider.value -= sprint_drain_amount * delta
@@ -65,7 +41,7 @@ func _process(delta):
 			sprint_slider.value += sprint_refresh_amount * delta
 		if sprint_slider.value == sprint_slider.max_value:
 			sprint_slider.visible = false
-	
+
 	# Handle movement
 	var input_dir = Input.get_vector("left", "right", "forward", "backward")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
