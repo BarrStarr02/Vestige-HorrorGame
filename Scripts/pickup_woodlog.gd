@@ -26,7 +26,7 @@ func _process(_delta):
 func interact_with_log():
 	# Always allow the log to be picked up
 	if fire_energy:
-		fire_energy.value += energy_add_amount
+		
 		# Queue the log for removal (so it disappears when picked up)
 		queue_free()
 		

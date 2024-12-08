@@ -1,4 +1,4 @@
-[gd_scene load_steps=87 format=4 uid="uid://pc6hys565kc1"]
+[gd_scene load_steps=89 format=4 uid="uid://pc6hys565kc1"]
 
 [ext_resource type="PackedScene" uid="uid://btg3v3qoxe5wt" path="res://scenes/player.tscn" id="1_j7cys"]
 [ext_resource type="Script" path="res://scenes/level.gd" id="1_o6ib5"]
@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://q3n32t2xs3m0" path="res://assets/textures/grass_patch_summer.png" id="17_v4e10"]
 [ext_resource type="PackedScene" uid="uid://covr6e4o6hdcl" path="res://scenes/woodlog.tscn" id="19_vx5rd"]
 [ext_resource type="Script" path="res://Scripts/deposit_area.gd" id="21_es4bx"]
+[ext_resource type="Script" path="res://Scripts/button.gd" id="22_yhyqf"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_gec67"]
 
@@ -762,6 +763,9 @@ material = SubResource("StandardMaterial3D_01oen")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_da2gw"]
 size = Vector3(2.15375, 2.31128, 2.10162)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_cfalv"]
+radius = 0.602723
 
 [node name="level" type="Node3D"]
 script = ExtResource("1_o6ib5")
@@ -13728,3 +13732,23 @@ visible = false
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.103668, 0.936702, -0.0409851)
 visible = false
 shape = SubResource("BoxShape3D_da2gw")
+
+[node name="button" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.71786, 0, -2.54678)
+script = ExtResource("22_yhyqf")
+
+[node name="Area3D" type="Area3D" parent="button"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.623416, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="button/Area3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="button/Area3D/StaticBody3D"]
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="button/Area3D/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.152162, -0.458386, 0)
+shape = SubResource("SphereShape3D_cfalv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="button/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.138193, -0.305924, -0.0394726)
+shape = SubResource("SphereShape3D_cfalv")
