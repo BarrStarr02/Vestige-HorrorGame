@@ -1,6 +1,6 @@
 extends Node3D
 
-@export var fire_decay_rate = 5.0  # Rate of fire decay per second
+@export var fire_decay_rate = 0.5  # Rate of fire decay per second
 @export var fire_increase_amount = 10  # Amount to increase fire energy when a log is added
 var fire_slider : Slider  # Reference to the fire slider
 var on_DepositArea_body_entered = false
