@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://btg3v3qoxe5wt"]
+[gd_scene load_steps=6 format=3 uid="uid://btg3v3qoxe5wt"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_gkobr"]
 [ext_resource type="Script" path="res://Scripts/camera.gd" id="2_b53gi"]
+[ext_resource type="Script" path="res://Scripts/raycast.gd" id="3_2fjh5"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xnkbj"]
 
@@ -33,3 +34,7 @@ light_volumetric_fog_energy = 0.0
 spot_range = 132.44
 spot_attenuation = 1.81
 spot_angle_attenuation = 2.54912
+
+[node name="RayCast3D" type="RayCast3D" parent="head"]
+transform = Transform3D(2.255, 0, 0, 0, -9.85692e-08, -2.255, 0, 2.255, -9.85692e-08, 0, 0, -0.0291895)
+script = ExtResource("3_2fjh5")

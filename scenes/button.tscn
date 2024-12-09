@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5si40vwn5j6j"]
+
+[ext_resource type="Script" path="res://Scripts/button.gd" id="1_xxq82"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_cfalv"]
+radius = 0.602723
+
+[node name="button" type="Node3D"]
+script = ExtResource("1_xxq82")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+shape = SubResource("SphereShape3D_cfalv")

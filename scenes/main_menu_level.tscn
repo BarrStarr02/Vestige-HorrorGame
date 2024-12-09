@@ -1,25 +1,25 @@
-[gd_scene load_steps=89 format=4 uid="uid://pc6hys565kc1"]
+[gd_scene load_steps=89 format=4 uid="uid://dup5eamk7xf20"]
 
-[ext_resource type="PackedScene" uid="uid://btg3v3qoxe5wt" path="res://scenes/player.tscn" id="1_j7cys"]
-[ext_resource type="Script" path="res://scenes/level.gd" id="1_o6ib5"]
-[ext_resource type="PackedScene" uid="uid://bft8n8va5nnov" path="res://scenes/wendigo.tscn" id="2_clumq"]
-[ext_resource type="Texture2D" uid="uid://dgnt38s11q3f1" path="res://assets/textures/C.jpg" id="3_qid6m"]
-[ext_resource type="Texture2D" uid="uid://1a7utvy8n6ff" path="res://assets/textures/PSX_Seamless_ForestWildGround_128px.png" id="4_3paik"]
-[ext_resource type="Texture2D" uid="uid://cfqbtm5f51cv2" path="res://assets/textures/R.png" id="4_41ygn"]
-[ext_resource type="Texture2D" uid="uid://dlo26mwqcnfom" path="res://assets/textures/R2.png" id="5_va38a"]
-[ext_resource type="Texture2D" uid="uid://bup8wl1ckkhe2" path="res://assets/models/CAMPFIRE_C.jpg" id="7_6qqwd"]
-[ext_resource type="Texture2D" uid="uid://bqjrqtag3i5bd" path="res://assets/textures/flame_02.png" id="8_2mnl8"]
-[ext_resource type="Texture2D" uid="uid://vgoj08k3s8wy" path="res://assets/textures/smoke_01.png" id="9_aq7al"]
-[ext_resource type="Texture2D" uid="uid://dyeasb7h0jxhm" path="res://assets/models/sleeping bag_sleeping_bag.png" id="10_8qk3g"]
-[ext_resource type="Texture2D" uid="uid://dt4vn7ammi3qu" path="res://assets/models/volvo_volvo.jpg" id="12_ij56l"]
-[ext_resource type="Texture2D" uid="uid://d3inrej3rrj3g" path="res://assets/textures/paper_log_1.png" id="13_l5wbe"]
-[ext_resource type="Texture2D" uid="uid://ch1rln2fo436b" path="res://assets/textures/W2.png" id="14_7mdbk"]
-[ext_resource type="Animation" uid="uid://cpgxxeg5oh3do" path="res://assets/animations/imports/IdleImport.res" id="15_q6vx8"]
-[ext_resource type="AnimationLibrary" uid="uid://ceg05xtxp81fg" path="res://assets/animations/imports/Imported.res" id="16_61tx5"]
-[ext_resource type="Script" path="res://Scripts/campfire.gd" id="17_hk5ve"]
-[ext_resource type="Texture2D" uid="uid://q3n32t2xs3m0" path="res://assets/textures/grass_patch_summer.png" id="17_v4e10"]
-[ext_resource type="PackedScene" path="res://scenes/woodlog.tscn" id="19_vx5rd"]
-[ext_resource type="Script" path="res://Scripts/static_body_3d.gd" id="20_ch0gl"]
+[ext_resource type="Script" path="res://scenes/level.gd" id="1_rhwjb"]
+[ext_resource type="Texture2D" uid="uid://dgnt38s11q3f1" path="res://assets/textures/C.jpg" id="2_7qyxa"]
+[ext_resource type="Texture2D" uid="uid://cfqbtm5f51cv2" path="res://assets/textures/R.png" id="3_8p08c"]
+[ext_resource type="Texture2D" uid="uid://dlo26mwqcnfom" path="res://assets/textures/R2.png" id="4_vuadp"]
+[ext_resource type="Texture2D" uid="uid://1a7utvy8n6ff" path="res://assets/textures/PSX_Seamless_ForestWildGround_128px.png" id="5_tevvy"]
+[ext_resource type="PackedScene" uid="uid://bft8n8va5nnov" path="res://scenes/wendigo.tscn" id="7_vvqog"]
+[ext_resource type="Texture2D" uid="uid://dyeasb7h0jxhm" path="res://assets/models/sleeping bag_sleeping_bag.png" id="8_ll07k"]
+[ext_resource type="Texture2D" uid="uid://dt4vn7ammi3qu" path="res://assets/models/volvo_volvo.jpg" id="9_i3b6m"]
+[ext_resource type="Texture2D" uid="uid://d3inrej3rrj3g" path="res://assets/textures/paper_log_1.png" id="10_ub3ml"]
+[ext_resource type="Texture2D" uid="uid://ch1rln2fo436b" path="res://assets/textures/W2.png" id="11_tehvg"]
+[ext_resource type="Animation" uid="uid://cpgxxeg5oh3do" path="res://assets/animations/imports/IdleImport.res" id="12_hliid"]
+[ext_resource type="AnimationLibrary" uid="uid://ceg05xtxp81fg" path="res://assets/animations/imports/Imported.res" id="13_0i8k1"]
+[ext_resource type="Texture2D" uid="uid://q3n32t2xs3m0" path="res://assets/textures/grass_patch_summer.png" id="14_cvxrq"]
+[ext_resource type="PackedScene" path="res://scenes/woodlog.tscn" id="15_cowlv"]
+[ext_resource type="Script" path="res://Scripts/campfire.gd" id="16_my0bq"]
+[ext_resource type="Texture2D" uid="uid://bup8wl1ckkhe2" path="res://assets/models/CAMPFIRE_C.jpg" id="17_8yy2b"]
+[ext_resource type="Texture2D" uid="uid://bqjrqtag3i5bd" path="res://assets/textures/flame_02.png" id="18_rfspf"]
+[ext_resource type="Texture2D" uid="uid://vgoj08k3s8wy" path="res://assets/textures/smoke_01.png" id="19_u2xww"]
+[ext_resource type="Script" path="res://Scripts/static_body_3d.gd" id="20_7i4ju"]
+[ext_resource type="Script" path="res://scripts/menu.gd" id="20_ts616"]
 
 [sub_resource type="ImageTexture" id="ImageTexture_dqb78"]
 
@@ -57,7 +57,7 @@ density = 0.05
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u2d86"]
 resource_name = "Material.009"
 vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("3_qid6m")
+albedo_texture = ExtResource("2_7qyxa")
 emission_enabled = true
 emission_energy_multiplier = 0.0
 
@@ -65,7 +65,7 @@ emission_energy_multiplier = 0.0
 resource_name = "TexturesCom_Branches0011_1_masked_S"
 transparency = 4
 vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("4_41ygn")
+albedo_texture = ExtResource("3_8p08c")
 emission_enabled = true
 emission_energy_multiplier = 0.0
 
@@ -132,7 +132,7 @@ data = PackedVector3Array(0.0154, 0.2836, -0.0162, 0.0093, 0.2816, -0.0031, 0, 0
 resource_name = "TexturesCom_Branches0018_1_masked_S"
 transparency = 4
 vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("5_va38a")
+albedo_texture = ExtResource("4_vuadp")
 emission_enabled = true
 emission_energy_multiplier = 0.0
 
@@ -290,7 +290,7 @@ data = PackedVector3Array(0.0178, -0.2107, 0.0004, 0.0116, -0.2131, 0.0135, 0.00
 [sub_resource type="BoxMesh" id="BoxMesh_l1op5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oeyd5"]
-albedo_texture = ExtResource("4_3paik")
+albedo_texture = ExtResource("5_tevvy")
 albedo_texture_force_srgb = true
 metallic_specular = 0.63
 emission = Color(0.399755, 0.221484, 0.121481, 1)
@@ -310,7 +310,7 @@ data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_otybc"]
 resource_name = "sleeping_bag"
 cull_mode = 2
-albedo_texture = ExtResource("10_8qk3g")
+albedo_texture = ExtResource("8_ll07k")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_ifqti"]
 _surfaces = [{
@@ -354,7 +354,7 @@ resource_name = "Material"
 cull_mode = 2
 shading_mode = 0
 albedo_color = Color(0.396889, 0.396889, 0.396889, 1)
-albedo_texture = ExtResource("12_ij56l")
+albedo_texture = ExtResource("9_i3b6m")
 texture_filter = 2
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_xx2of"]
@@ -432,7 +432,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_g1nu2")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6frn5"]
-albedo_texture = ExtResource("13_l5wbe")
+albedo_texture = ExtResource("10_ub3ml")
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_x3ijy"]
 data = PackedVector3Array(-0.1016, 0, -0.1397, 0.1016, 0, 0.1397, -0.1016, 0, 0.1397, -0.1016, 0, -0.1397, 0.1016, 0, -0.1397, 0.1016, 0, 0.1397)
@@ -440,7 +440,7 @@ data = PackedVector3Array(-0.1016, 0, -0.1397, 0.1016, 0, 0.1397, -0.1016, 0, 0.
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t6gpo"]
 resource_name = "Material.002"
 vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("14_7mdbk")
+albedo_texture = ExtResource("11_tehvg")
 emission_enabled = true
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_6j43v"]
@@ -589,7 +589,7 @@ bind/39/pose = Transform3D(-38.2191, -3.8147e-06, -9.53674e-07, 1.90735e-06, 49.
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_uc4xw"]
 _data = {
-"mixamo_com": ExtResource("15_q6vx8")
+"mixamo_com": ExtResource("12_hliid")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q7mav"]
@@ -634,12 +634,12 @@ shadow_mesh = SubResource("ArrayMesh_xw6up")
 transparency = 2
 alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
-albedo_texture = ExtResource("17_v4e10")
+albedo_texture = ExtResource("14_cvxrq")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pc51j"]
 resource_name = "Material.002"
 cull_mode = 2
-albedo_texture = ExtResource("7_6qqwd")
+albedo_texture = ExtResource("17_8yy2b")
 roughness = 0.5
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_7modm"]
@@ -710,7 +710,7 @@ color_ramp = SubResource("GradientTexture1D_7dqeh")
 transparency = 1
 shading_mode = 0
 vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("8_2mnl8")
+albedo_texture = ExtResource("18_rfspf")
 texture_filter = 0
 billboard_mode = 3
 particles_anim_h_frames = 1
@@ -753,7 +753,7 @@ color_ramp = SubResource("GradientTexture1D_03hfw")
 transparency = 1
 shading_mode = 0
 vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("9_aq7al")
+albedo_texture = ExtResource("19_u2xww")
 texture_filter = 0
 billboard_mode = 3
 particles_anim_h_frames = 1
@@ -767,10 +767,10 @@ material = SubResource("StandardMaterial3D_01oen")
 size = Vector3(2.15375, 2.31128, 2.10162)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_cfalv"]
-radius = 0.602723
+radius = 0.847127
 
 [node name="level" type="Node3D"]
-script = ExtResource("1_o6ib5")
+script = ExtResource("1_rhwjb")
 
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
@@ -782,10 +782,10 @@ grow_vertical = 2
 
 [node name="sprint_slider" type="VSlider" parent="UI"]
 layout_mode = 0
-offset_left = 41.0
-offset_top = 446.0
-offset_right = 57.0
-offset_bottom = 672.0
+offset_left = -309.0
+offset_top = 411.0
+offset_right = -293.0
+offset_bottom = 637.0
 theme_override_icons/grabber = SubResource("ImageTexture_dqb78")
 max_value = 1.0
 step = 0.0
@@ -793,10 +793,10 @@ value = 1.0
 
 [node name="interact text" type="RichTextLabel" parent="UI"]
 layout_mode = 0
-offset_left = 507.0
-offset_top = 465.0
-offset_right = 845.0
-offset_bottom = 538.0
+offset_left = -465.0
+offset_top = 327.0
+offset_right = -127.0
+offset_bottom = 400.0
 theme_override_font_sizes/normal_font_size = 39
 text = "[F] Interact"
 
@@ -807,10 +807,10 @@ offset_bottom = 40.0
 
 [node name="fire_slider" type="HSlider" parent="UI/fire_stuff"]
 layout_mode = 0
-offset_left = 24.0
-offset_top = 19.0
-offset_right = 406.0
-offset_bottom = 35.0
+offset_left = -616.0
+offset_top = 29.0
+offset_right = -234.0
+offset_bottom = 45.0
 theme_override_icons/grabber = SubResource("ImageTexture_acvb5")
 step = 0.0
 
@@ -822,6 +822,34 @@ offset_right = 343.0
 offset_bottom = 89.0
 theme_override_font_sizes/normal_font_size = 25
 text = "FIRE HEALTH"
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.741324, -0.0255663, -0.67066, -0.00369273, 0.999104, -0.0421687, 0.671137, 0.0337372, 0.740565, -0.41474, 0.296579, -1.55448)
+fov = 90.0
+
+[node name="Menu" type="VBoxContainer" parent="Camera3D"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -124.5
+offset_top = -65.0
+offset_right = 124.5
+offset_bottom = 65.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("20_ts616")
+
+[node name="ButtonNewGame" type="Button" parent="Camera3D/Menu"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "New Game"
+
+[node name="ButtonQuit" type="Button" parent="Camera3D/Menu"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Quit"
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_0h4kb")
@@ -12276,13 +12304,11 @@ transform = Transform3D(200, 0, 0, 0, 0.145, 0, 0, 0, 200, 0, 0, 0)
 shape = SubResource("BoxShape3D_gu03g")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00107204, -0.338059, 0.000181537)
 mesh = SubResource("BoxMesh_l1op5")
 surface_material_override/0 = SubResource("StandardMaterial3D_oeyd5")
 
-[node name="Player" parent="." instance=ExtResource("1_j7cys")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0593, 0)
-
-[node name="wendigo" parent="." instance=ExtResource("2_clumq")]
+[node name="wendigo" parent="." instance=ExtResource("7_vvqog")]
 transform = Transform3D(0.349789, 0, -0.0121477, 0, 0.35, 0, 0.0121477, 0, 0.349789, -9.05079, 0.825384, 0)
 visible = false
 
@@ -12730,7 +12756,7 @@ skin = SubResource("Skin_bkea5")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="WendiGo/WendigoBase"]
 libraries = {
 "": SubResource("AnimationLibrary_uc4xw"),
-"Imported": ExtResource("16_61tx5")
+"Imported": ExtResource("13_0i8k1")
 }
 autoplay = "mixamo_com"
 
@@ -13696,12 +13722,12 @@ mesh = SubResource("ArrayMesh_f0wjj")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_625ip")
 
-[node name="woodlog" parent="." instance=ExtResource("19_vx5rd")]
+[node name="woodlog" parent="." instance=ExtResource("15_cowlv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.07012)
 
 [node name="campfire" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.80165, 0.0186188, -2.62325)
-script = ExtResource("17_hk5ve")
+script = ExtResource("16_my0bq")
 
 [node name="CAMPFIRE" type="MeshInstance3D" parent="campfire"]
 mesh = SubResource("ArrayMesh_jsl7u")
@@ -13781,18 +13807,22 @@ shape = SubResource("BoxShape3D_da2gw")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.71786, 0, -2.54678)
 
 [node name="Area3D" type="Area3D" parent="button"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.623416, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.243294, 0.698207, -0.0548453)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="button/Area3D"]
-script = ExtResource("20_ch0gl")
+script = ExtResource("20_7i4ju")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="button/Area3D/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0767237, -0.209657, -0.0250835)
 skeleton = NodePath("../../..")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="button/Area3D/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.458386, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.185309, -0.43607, 0.0400329)
 shape = SubResource("SphereShape3D_cfalv")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="button/Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.138193, -0.305924, -0.0394726)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.143785, -0.0608032, -0.0379896)
 shape = SubResource("SphereShape3D_cfalv")
+
+[connection signal="pressed" from="Camera3D/Menu/ButtonNewGame" to="Camera3D/Menu" method="_on_button_new_game_pressed"]
+[connection signal="pressed" from="Camera3D/Menu/ButtonQuit" to="Camera3D/Menu" method="_on_button_quit_pressed"]

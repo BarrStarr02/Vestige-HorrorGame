@@ -1,7 +1,8 @@
-[gd_scene load_steps=18 format=3 uid="uid://dftdjywmumkop"]
+[gd_scene load_steps=19 format=3 uid="uid://dftdjywmumkop"]
 
 [ext_resource type="PackedScene" uid="uid://bgi5jiop4inku" path="res://assets/models/CAMPFIRE.glb" id="1_igqki"]
 [ext_resource type="Texture2D" uid="uid://bqjrqtag3i5bd" path="res://assets/textures/flame_02.png" id="2_dnfu6"]
+[ext_resource type="Script" path="res://Scripts/campfire.gd" id="2_tpes8"]
 [ext_resource type="Texture2D" uid="uid://vgoj08k3s8wy" path="res://assets/textures/smoke_01.png" id="3_agvb8"]
 
 [sub_resource type="Gradient" id="Gradient_di3mh"]
@@ -90,7 +91,8 @@ particles_anim_loop = false
 [sub_resource type="QuadMesh" id="QuadMesh_m7v1i"]
 material = SubResource("StandardMaterial3D_01oen")
 
-[node name="CAMPFIRE2" instance=ExtResource("1_igqki")]
+[node name="campfire" instance=ExtResource("1_igqki")]
+script = ExtResource("2_tpes8")
 
 [node name="flames" type="GPUParticles3D" parent="." index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.376195, 0)
