@@ -1,4 +1,4 @@
-[gd_scene load_steps=89 format=4 uid="uid://dup5eamk7xf20"]
+[gd_scene load_steps=86 format=4 uid="uid://dup5eamk7xf20"]
 
 [ext_resource type="Script" path="res://scenes/level.gd" id="1_rhwjb"]
 [ext_resource type="Texture2D" uid="uid://dgnt38s11q3f1" path="res://assets/textures/C.jpg" id="2_7qyxa"]
@@ -13,12 +13,9 @@
 [ext_resource type="Animation" uid="uid://cpgxxeg5oh3do" path="res://assets/animations/imports/IdleImport.res" id="12_hliid"]
 [ext_resource type="AnimationLibrary" uid="uid://ceg05xtxp81fg" path="res://assets/animations/imports/Imported.res" id="13_0i8k1"]
 [ext_resource type="Texture2D" uid="uid://q3n32t2xs3m0" path="res://assets/textures/grass_patch_summer.png" id="14_cvxrq"]
-[ext_resource type="PackedScene" path="res://scenes/woodlog.tscn" id="15_cowlv"]
-[ext_resource type="Script" path="res://Scripts/campfire.gd" id="16_my0bq"]
 [ext_resource type="Texture2D" uid="uid://bup8wl1ckkhe2" path="res://assets/models/CAMPFIRE_C.jpg" id="17_8yy2b"]
 [ext_resource type="Texture2D" uid="uid://bqjrqtag3i5bd" path="res://assets/textures/flame_02.png" id="18_rfspf"]
 [ext_resource type="Texture2D" uid="uid://vgoj08k3s8wy" path="res://assets/textures/smoke_01.png" id="19_u2xww"]
-[ext_resource type="Script" path="res://Scripts/static_body_3d.gd" id="20_7i4ju"]
 [ext_resource type="Script" path="res://scripts/menu.gd" id="20_ts616"]
 
 [sub_resource type="ImageTexture" id="ImageTexture_dqb78"]
@@ -13722,12 +13719,21 @@ mesh = SubResource("ArrayMesh_f0wjj")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_625ip")
 
-[node name="woodlog" parent="." instance=ExtResource("15_cowlv")]
+[node name="woodlog" parent="."]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.07012)
+script = null
 
 [node name="campfire" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.80165, 0.0186188, -2.62325)
-script = ExtResource("16_my0bq")
 
 [node name="CAMPFIRE" type="MeshInstance3D" parent="campfire"]
 mesh = SubResource("ArrayMesh_jsl7u")
@@ -13810,7 +13816,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.71786, 0, -2.54678)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.243294, 0.698207, -0.0548453)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="button/Area3D"]
-script = ExtResource("20_7i4ju")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="button/Area3D/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0767237, -0.209657, -0.0250835)
