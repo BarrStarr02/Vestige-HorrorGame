@@ -814,6 +814,18 @@ offset_bottom = 538.0
 theme_override_font_sizes/normal_font_size = 39
 text = "[F] Interact"
 
+[node name="hint" type="RichTextLabel" parent="UI"]
+layout_mode = 0
+offset_left = 507.0
+offset_top = 465.0
+offset_right = 845.0
+offset_bottom = 538.0
+theme_override_font_sizes/normal_font_size = 39
+text = "[F] Interact"
+
+[node name="Timer" type="Timer" parent="UI/hint"]
+autostart = true
+
 [node name="fire_stuff" type="Control" parent="UI"]
 anchors_preset = 0
 offset_right = 40.0

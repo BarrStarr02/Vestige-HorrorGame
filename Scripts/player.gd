@@ -6,14 +6,14 @@ var SPRINT_SPEED = 5.0
 const JUMP_VELOCITY = 3.0
 var sprint_slider
 var sprint_drain_amount = 0.3
-var sprint_refresh_amount = 0.2
+var sprint_refresh_amount = 0.5
 var has_log = false
 var interactable : Node = null  # Reference to the interactable object (log or campfire)
 var fire_slider : Slider  # Reference to the fire slider
 var in_deposit_area = false  # Track if the player is in the deposit area
 var deposit_area : Area3D
 var collected_logs = 0
-
+var gravity: float = -9.8
 # Called when the player enters the deposit area
 
 
@@ -29,7 +29,10 @@ func _ready():
 
 # Handle input, movement, sprinting, and interactions
 func _process(delta):
-
+	if is_on_floor() and Input.is_action_pressed("jump"):  # Default 'ui_accept' is the space bar
+		velocity.y = JUMP_VELOCITY  # Apply jump velocity
+	else:
+		velocity.y += gravity * delta
 		
 	# Handle sprint logic
 	if SPEED == SPRINT_SPEED:
