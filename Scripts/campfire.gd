@@ -1,13 +1,21 @@
 extends Node3D
-
-@export var fire_decay_rate = 0.5  # Rate of fire decay per second
+const MAINMENUANIM = preload("res://scenes/mainmenuanim.tscn")
+@export var fire_decay_rate = 1.0  # Rate of fire decay per second
 @export var fire_increase_amount = 10  # Amount to increase fire energy when a log is added
 var fire_slider : Slider  # Reference to the fire slider
 var on_DepositArea_body_entered = false
 var is_fire_active = true  # Flag to track if the fire is still active
+var is_game_over = false
 
 # Reference to the player
 var player : Node3D
+
+func game_over():
+	if is_game_over:
+		return
+	is_game_over = true
+	get_tree().change_scene_to_packed(MAINMENUANIM)
+	
 
 func _ready():
 	# Attempt to locate the fire slider (in the UI)
@@ -38,3 +46,4 @@ func _process(delta):
 			visible = false  # Hide the fire (or maybe change to a "dormant" state)
 			print("The fire has gone out!")
 			is_fire_active = false  # Stop the fire from decaying further
+			game_over()
