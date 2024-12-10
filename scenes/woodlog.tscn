@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://covr6e4o6hdcl"]
+[gd_scene load_steps=6 format=3 uid="uid://bo0bulchex17c"]
 
 [ext_resource type="Script" path="res://Scripts/pickup_woodlog.gd" id="1_roy37"]
 [ext_resource type="Texture2D" uid="uid://dgnt38s11q3f1" path="res://assets/textures/C.jpg" id="1_u0rug"]

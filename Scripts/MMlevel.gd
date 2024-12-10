@@ -1,7 +1,7 @@
 extends Node3D
 
-@export var rotation_speed = 30.0  # Degrees per second
-@onready var camera_pivot = $CameraPivot  # Adjust the path as needed
+@export var rotation_speed = 20.0 
+@onready var camera_pivot = $CameraPivot  
 
 func _process(delta):
 	if camera_pivot:

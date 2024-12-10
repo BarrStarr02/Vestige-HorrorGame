@@ -1,4 +1,4 @@
-[gd_scene load_steps=90 format=4 uid="uid://cdmymthc6oe50"]
+[gd_scene load_steps=90 format=4 uid="uid://sikaw71cyju5"]
 
 [ext_resource type="Script" path="res://Scripts/MMlevel.gd" id="1_1dlud"]
 [ext_resource type="Texture2D" uid="uid://dgnt38s11q3f1" path="res://assets/textures/C.jpg" id="2_jk62w"]
